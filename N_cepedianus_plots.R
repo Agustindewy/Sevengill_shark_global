@@ -1,5 +1,5 @@
 
-# De Wysiecki et al. - World ENM projection for the broadnose sevengill shark (Notorynchus cepedianus)
+# De Wysiecki et al. - Global ENM projection for the broadnose sevengill shark (Notorynchus cepedianus)
 
 # Additional analyses and figures
 # Each figure is self-sufficient, so expect high repetition of lines in script
@@ -240,7 +240,7 @@ plot_overlap(N.test_depth, niches = c(1, 2), data = T, background = T, proportio
 decorate3d(aspect = c(1, 1, 1), xlab = '', ylab = '', zlab = '') 
 axes3d(xat = c(-4000, -2000, 0, 2000), yat = c(20, 15, 10), zat = c(0, 0.2, 0.4), box = T)
 mtext3d('Bathymetry (m)', edge = 'x-+', line = 1.25)
-mtext3d('Sea surface temperature (บC)', edge = 'y-+', line = 0, at = 12)
+mtext3d('Sea surface temperature (ยบC)', edge = 'y-+', line = 0, at = 12)
 mtext3d('Diffuse attenuation Kd490 (1/m)', edge = 'z+-', line = 0, at = 0.32)
 snapshot3d('Ellipsoid_depth.png', fmt = 'png', top = T, width = 1000, height = 1000, webshot = F)
 
@@ -262,9 +262,9 @@ plot_overlap(N.test_slope, niches = c(1, 2), data = T, background = T, proportio
              background_col = viridis::cividis, legend = F)
 decorate3d(aspect = c(1, 1, 1), xlab = '', ylab = '', zlab = '') 
 axes3d(xat = c(0, 0.2, 0.4), yat = c(20, 15, 10), zat = c(-2, 2, 6), box = T)
-mtext3d('Sea surface temperature (บC)', edge = 'y++', line = 0, at = 12)
+mtext3d('Sea surface temperature (ยบC)', edge = 'y++', line = 0, at = 12)
 mtext3d('Diffuse attenuation Kd490 (1/m)', edge = 'x--', line = 0, at = 0.32)
-mtext3d('Slope (บ)', edge = 'z+-', line = 1.25)
+mtext3d('Slope (ยบ)', edge = 'z+-', line = 1.25)
 snapshot3d('Ellipsoid_slope.png', fmt = 'png', top = T, width = 1000, height = 1000, webshot = F)
 
 ggplot() +
@@ -285,7 +285,7 @@ plot_overlap(N.test_dist, niches = c(1, 2), data = T, background = T, proportion
              background_col = viridis::cividis, legend = F)
 decorate3d(aspect = c(1, 1, 1), xlab = '', ylab = '', zlab = '') 
 axes3d(xat = c(-50, 50, 150, 250), yat = c(20, 15, 10), zat = c(0, 0.2, 0.4), box = T)
-mtext3d('Sea surface temperature (บC)', edge = 'y+-', line = 0, at = 18)
+mtext3d('Sea surface temperature (ยบC)', edge = 'y+-', line = 0, at = 18)
 mtext3d('Diffuse attenuation Kd490 (1/m)', edge = 'z--', line = 0, at = 0.09)
 mtext3d('Distance to coast (km)', edge = 'x--', line = 1.25)
 snapshot3d('Ellipsoid_dist.png', fmt = 'png', top = T, width = 1000, height = 1000, webshot = F)
@@ -334,8 +334,8 @@ ggplot(data = df) +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 10),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = 'Latitude (S)', breaks = seq(-30, -60, -10), labels = c('30บ', '40บ', '50บ', '60บ')) + 
-  scale_x_continuous(name = 'Longitude (W)', breaks = seq(-40, -70, -10), labels = c('40บ', '50บ', '60บ', '70บ')) +
+  scale_y_continuous(name = 'Latitude (S)', breaks = seq(-30, -60, -10), labels = c('30ยบ', '40ยบ', '50ยบ', '60ยบ')) + 
+  scale_x_continuous(name = 'Longitude (W)', breaks = seq(-40, -70, -10), labels = c('40ยบ', '50ยบ', '60ยบ', '70ยบ')) +
   ggsn::scalebar(x.min = min(df$x), x.max = max(df$x), y.min = min(df$y), y.max = max(df$y), transform = T, 
                  dist = 200, st.size = 3, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = -40.1, y = -60.3))
@@ -375,8 +375,8 @@ ggplot(data = df) +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 10),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = 'Latitude (S)', breaks = seq(-30, -60, -10), labels = c('30บ', '40บ', '50บ', '60บ')) + 
-  scale_x_continuous(name = 'Longitude (W)', breaks = seq(120, 160, 10), labels = c('120บ', '130บ', '140บ', '150บ', '160บ')) +
+  scale_y_continuous(name = 'Latitude (S)', breaks = seq(-30, -60, -10), labels = c('30ยบ', '40ยบ', '50ยบ', '60ยบ')) + 
+  scale_x_continuous(name = 'Longitude (W)', breaks = seq(120, 160, 10), labels = c('120ยบ', '130ยบ', '140ยบ', '150ยบ', '160ยบ')) +
   ggsn::scalebar(x.min = min(df$x), x.max = max(df$x), y.min = min(df$y), y.max = max(df$y), transform = T, 
                  dist = 200, st.size = 3, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = 161.5, y = -52.6))
@@ -484,8 +484,8 @@ p_df <- transform(p_df, var = factor(var, levels = c('Temperature', 'Distance_to
                                                      'Surface_temperature', 'Kd490')))
 
 # Labeller
-VAR_names = as_labeller(c(Temperature = 'Temperature~(บC)', Distance_to_coast = 'Distance~to~coast~(km)',
-                          Surface_temperature = 'Sea~Surface~Temperature~(บC)', Kd490 = 'Kd490~(m^-1)'), 
+VAR_names = as_labeller(c(Temperature = 'Temperature~(ยบC)', Distance_to_coast = 'Distance~to~coast~(km)',
+                          Surface_temperature = 'Sea~Surface~Temperature~(ยบC)', Kd490 = 'Kd490~(m^-1)'), 
                           default = label_parsed)
 
 # Plot
@@ -597,8 +597,8 @@ p_df <- transform(p_df, var = factor(var, levels = c('Temperature', 'Distance_to
                                                      'Surface_temperature', 'Kd490')))
 
 # Labeller
-VAR_names = as_labeller(c(Temperature = 'Temperature~(บC)', Distance_to_coast = 'Distance~to~coast~(km)',
-                          Surface_temperature = 'Sea~Surface~Temperature~(บC)', Kd490 = 'Kd490~(m^-1)'), 
+VAR_names = as_labeller(c(Temperature = 'Temperature~(ยบC)', Distance_to_coast = 'Distance~to~coast~(km)',
+                          Surface_temperature = 'Sea~Surface~Temperature~(ยบC)', Kd490 = 'Kd490~(m^-1)'), 
                         default = label_parsed)
 
 # Plot
@@ -687,9 +687,9 @@ plot_overlap(N.test, niches = c(1, 2), data = T, background = T, proportion = 1,
              data_col = c('darkred', 'darkorange'), niche_col = c('darkred', 'darkorange'), 
              background_col = viridis::viridis, legend = F)
 rgl.bbox(color = c('#21908CFF', 'black'), xat = c(10, 15, 20), yat = c(0, 100, 200), zat = c(0, 12, 24))
-mtext3d('Sea surface temperature (บC)', edge = 'x++', line = 2.2, at = 16, col = 'black')
+mtext3d('Sea surface temperature (ยบC)', edge = 'x++', line = 2.2, at = 16, col = 'black')
 mtext3d('Distance to coast (km)', edge = 'y--', line = 0.7, at = -50, col = 'black')
-mtext3d('Mean depth temperature (บC)', edge = 'z-+', line = -0.5, at = 18, col = 'black')
+mtext3d('Mean depth temperature (ยบC)', edge = 'z-+', line = -0.5, at = 18, col = 'black')
 snapshot3d('Ellipsoid.png', fmt = 'png', top = T, width = 1000, height = 1000, webshot = F)
 movie3d(spin3d(axis = c(0, 0, 1), rpm = 2), duration = 20, dir = './')
 
@@ -757,7 +757,7 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 8),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50บN', '0บ', '50บS')) + 
+  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50ยบN', '0ยบ', '50ยบS')) + 
   scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('', '', '')) 
 ggsave('Figure 4A.tiff', dpi = 900, width = 20, height = 8.5, units = 'cm')
 
@@ -824,7 +824,7 @@ nwa_ext <- extent(-78, -56.5, 34, 45)          # Northwest Atlantic
 azo_ext <- extent(-34, -22.25, 35, 42)         # Azores Is.
 nea_ext <- extent(-20.5, 42.5, 13, 64)         # Northeast Atlantic
 nwp_ext <- extent(116, 146.5, 27, 46.5)        # Northwest Pacific
-gal_ext <- extent(-93, -87.5, -2.5, 1.25)      # Galแpagos Is.
+gal_ext <- extent(-93, -87.5, -2.5, 1.25)      # Galรกpagos Is.
 sep_ext <- extent(-84, -69, -52, -0.5)         # Southeast Pacific
 tdc_ext <- extent(-15.5, -7, -43, -35)         # Tristan da Cunha Is.
 sea_ext <- extent(9, 33, -37.5, -13)           # Southeast Atlantic
@@ -835,7 +835,7 @@ nze2_ext <- extent(-179.99, -172, -52, -27)    # New Zealand 2
 Ids1 <- c('Southwest Atlantic', 'Australia') # local transfers
          
 Ids2 <- c('Northeast Pacific', 'Northwest Atlantic', 'Azores Is.', 'Northeast Atlantic', 
-         'Northwest Pacific', 'Galแpagos Is.', 'Southeast Pacific', 'Tristan da Cunha Is.', 
+         'Northwest Pacific', 'Galรกpagos Is.', 'Southeast Pacific', 'Tristan da Cunha Is.', 
          'Southeast Atlantic', 'Amsterdam I.', 'New Zealand 1', 'New Zealand 2') # exotic transfers
   
 polys1 <- SpatialPolygons(list(
@@ -868,8 +868,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 8),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50บN', '0บ', '50บS')) + 
-  scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('100บE', '0บ', '100บW')) 
+  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50ยบN', '0ยบ', '50ยบS')) + 
+  scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('100ยบE', '0ยบ', '100ยบW')) 
 ggsave('Figure 4B.tiff', dpi = 900, width = 20, height = 8.5, units = 'cm')
 
 
@@ -911,7 +911,7 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 8),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50บN', '0บ', '50บS')) + 
+  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50ยบN', '0ยบ', '50ยบS')) + 
   scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('', '', '')) 
 ggsave('Figure S7A.tiff', dpi = 900, width = 20, height = 8.5, units = 'cm')
 
@@ -932,8 +932,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 8),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50บN', '0บ', '50บS')) + 
-  scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('100บE', '0บ', '100บW')) 
+  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50ยบN', '0ยบ', '50ยบS')) + 
+  scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('100ยบE', '0ยบ', '100ยบW')) 
 ggsave('Figure S7B.tiff', dpi = 900, width = 20, height = 8.5, units = 'cm')
 
 
@@ -1039,8 +1039,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 6),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(-30, -40, -50), labels = c('-30บ', '-40บ', '-50บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-55, -65), labels = c('-55บ', '-65บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-30, -40, -50), labels = c('-30ยบ', '-40ยบ', '-50ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-55, -65), labels = c('-55ยบ', '-65ยบ')) +
   ggsn::scalebar(x.min = min(swa_df$x), x.max = max(swa_df$x), y.min = min(swa_df$y), y.max = max(swa_df$y), transform = T, 
                  dist = 100, st.size = 1.1, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = -49.5, y = -51.9), box.fill = 'black')
@@ -1079,8 +1079,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 5.5),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(-25, -35, -45), labels = c('-25บ', '-35บ', '-45บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(120, 130, 140, 150), labels = c('120บ', '130บ', '140บ', '150บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-25, -35, -45), labels = c('-25ยบ', '-35ยบ', '-45ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(120, 130, 140, 150), labels = c('120ยบ', '130ยบ', '140ยบ', '150ยบ')) +
   ggsn::scalebar(x.min = min(aus_df$x), x.max = max(aus_df$x), y.min = min(aus_df$y), y.max = max(aus_df$y), transform = T, 
                  dist = 200, st.size = 1.4, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = 117, y = -45), box.fill = 'black')
@@ -1119,8 +1119,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 5.5),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(30, 40, 50), labels = c('30บ', '40บ', '50บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-110, -120, -130), labels = c('-110บ', '-120บ', '-130บ')) +
+  scale_y_continuous(name = NULL, breaks = c(30, 40, 50), labels = c('30ยบ', '40ยบ', '50ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-110, -120, -130), labels = c('-110ยบ', '-120ยบ', '-130ยบ')) +
   ggsn::scalebar(x.min = min(nep_df$x), x.max = max(nep_df$x), y.min = min(nep_df$y), y.max = max(nep_df$y), transform = T, 
                  dist = 200, st.size = 1.1, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = -130.4, y = 22.9), box.fill = 'black')
@@ -1159,8 +1159,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 6),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(30, 40), labels = c('30บ', '40บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(120, 130, 140), labels = c('120บ', '130บ', '140บ')) +
+  scale_y_continuous(name = NULL, breaks = c(30, 40), labels = c('30ยบ', '40ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(120, 130, 140), labels = c('120ยบ', '130ยบ', '140ยบ')) +
   ggsn::scalebar(x.min = min(nwp_df$x), x.max = max(nwp_df$x), y.min = min(nwp_df$y), y.max = max(nwp_df$y), transform = T, 
                  dist = 200, st.size = 1.2, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = 144.5, y = 28.2), box.fill = 'black')
@@ -1199,8 +1199,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 6),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(-45, -25, -5), labels = c('-45บ', '-25บ', '-5บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-80, -70), labels = c('-80บ', '-70บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-45, -25, -5), labels = c('-45ยบ', '-25ยบ', '-5ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-80, -70), labels = c('-80ยบ', '-70ยบ')) +
   ggsn::scalebar(x.min = min(sep_df$x), x.max = max(sep_df$x), y.min = min(sep_df$y), y.max = max(sep_df$y), transform = T, 
                  dist = 150, st.size = 1.5, height = 0.007, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.3, anchor = c(x = -78, y = -50), box.fill = 'black')
@@ -1237,22 +1237,22 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 6),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(-35, -25, -15), labels = c('-35บ', '-25บ', '-15บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(10, 20, 30), labels = c('10บ', '20บ', '30บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-35, -25, -15), labels = c('-35ยบ', '-25ยบ', '-15ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(10, 20, 30), labels = c('10ยบ', '20ยบ', '30ยบ')) +
   ggsn::scalebar(x.min = min(sea_df$x), x.max = max(sea_df$x), y.min = min(sea_df$y), y.max = max(sea_df$y), transform = T, 
                  dist = 150, st.size = 1.2, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = 13, y = -36.1), box.fill = 'black')
 ggsave('Figure 5_sea.tiff', dpi = 900, width = 5.5, height = 5, units = 'cm')
 
 
-## New Zealand ## - problematic because is located across the 180บ meridian
+## New Zealand ## - problematic because is located across the 180ยบ meridian
 
 nze_occ <- subset(dat, Region == 'New Zealand') # subset occurrences
-nze_occ$Longitude2 <- ifelse(nze_occ$Longitude < 0, (180 + nze_occ$Longitude) + 180, nze_occ$Longitude) # accomodate longitude to 0บ - 360บ
+nze_occ$Longitude2 <- ifelse(nze_occ$Longitude < 0, (180 + nze_occ$Longitude) + 180, nze_occ$Longitude) # accomodate longitude to 0ยบ - 360ยบ
 nze_occ1 <- subset(nze_occ, Source1 == 'Published literature')
 nze_occ2 <- subset(nze_occ, Source1 == 'GBIF/OBIS')
 
-# Accomodate raster to 0บ - 360บ
+# Accomodate raster to 0ยบ - 360ยบ
 nze_1 <- crop(mod_mosaic, extent(-180, 0, -68.91667, 83.66667)) # mind pole areas were removed
 nze_2 <- crop(mod_mosaic, extent(0, 180, -68.91667, 83.66667))   
 extent(nze_1) <- c(180, 360, -68.91667, 83.66667)
@@ -1286,8 +1286,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 6),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(-50, -40, -30), labels = c('-50บ', '-40บ', '-30บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(170, 180), labels = c('170บ', '180บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-50, -40, -30), labels = c('-50ยบ', '-40ยบ', '-30ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(170, 180), labels = c('170ยบ', '180ยบ')) +
   ggsn::scalebar(x.min = min(nze_df$x), x.max = max(nze_df$x), y.min = min(nze_df$y), y.max = max(nze_df$y), transform = T, 
                  dist = 100, st.size = 0.9, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = 186, y = -50.5), box.fill = 'black')
@@ -1378,8 +1378,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 8),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(36, 40, 44), labels = c('36บ', '40บ', '44บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-75, -70, -65, -60), labels = c('-75บ', '-70บ', '-65บ', '-60บ')) +
+  scale_y_continuous(name = NULL, breaks = c(36, 40, 44), labels = c('36ยบ', '40ยบ', '44ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-75, -70, -65, -60), labels = c('-75ยบ', '-70ยบ', '-65ยบ', '-60ยบ')) +
   ggsn::scalebar(x.min = min(nwa_df$x), x.max = max(nwa_df$x), y.min = min(nwa_df$y), y.max = max(nwa_df$y), transform = T, 
                  dist = 150, st.size = 1.75, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = -57.5, y = 34.7), box.fill = 'black')
@@ -1407,8 +1407,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 8),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(20, 40, 60), labels = c('20บ', '40บ', '60บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-10, 10, 30), labels = c('-10บ', '10บ', '30บ')) +
+  scale_y_continuous(name = NULL, breaks = c(20, 40, 60), labels = c('20ยบ', '40ยบ', '60ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-10, 10, 30), labels = c('-10ยบ', '10ยบ', '30ยบ')) +
   ggsn::scalebar(x.min = min(nea_df$x), x.max = max(nea_df$x), y.min = min(nea_df$y), y.max = max(nea_df$y), transform = T, 
                  dist = 400, st.size = 1.75, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = -10, y = 15.2), box.fill = 'black')
@@ -1474,7 +1474,7 @@ mod_mosaic <- crop(mod_mosaic, coast)
 
 # Define bounding box of regions predicted as suitable
 
-gal_ext <- extent(-93, -87.5, -2.5, 1.25)      # Galแpagos Is.
+gal_ext <- extent(-93, -87.5, -2.5, 1.25)      # Galรกpagos Is.
 azo_ext <- extent(-34, -22.25, 35, 42)         # Azores Is.
 tdc_ext <- extent(-15.5, -7, -43, -35)         # Tristan da Cunha Is.
 ams_ext <- extent(74.5, 80.5, -41.5, -35.25)   # Amsterdam/Saint-Paul Is.
@@ -1502,17 +1502,17 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 8),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(36, 38, 40), labels = c('36บ', '38บ', '40บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-30, -25), labels = c('-30บ', '-25บ')) +
+  scale_y_continuous(name = NULL, breaks = c(36, 38, 40), labels = c('36ยบ', '38ยบ', '40ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-30, -25), labels = c('-30ยบ', '-25ยบ')) +
   ggsn::scalebar(x.min = min(azo_df$x), x.max = max(azo_df$x), y.min = min(azo_df$y), y.max = max(azo_df$y), transform = T, 
                  dist = 50, st.size = 1.5, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = -32.5, y = 35.5), box.fill = 'black')
 ggsave('Figure S9_azo.tiff', dpi = 900, width = 8.2, height = 5, units = 'cm')
 
 
-## Galแpagos Is. ##
+## Galรกpagos Is. ##
 
-gal_occ <- subset(dat, Region == 'Galแpagos Is.') # subset occurrences
+gal_occ <- subset(dat, Region == 'Galรกpagos Is.') # subset occurrences
 gal_occ1 <- subset(gal_occ, Source1 == 'Published literature')
 
 # Check if extent of occurrences is bigger than predictions, if so re-define extent to the broadest area
@@ -1538,8 +1538,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 7),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(-2, 0), labels = c('-2บ', '0บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-92, -90, -88), labels = c('-92บ', '-90บ', '-88บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-2, 0), labels = c('-2ยบ', '0ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-92, -90, -88), labels = c('-92ยบ', '-90ยบ', '-88ยบ')) +
   ggsn::scalebar(x.min = min(gal_df$x), x.max = max(gal_df$x), y.min = min(gal_df$y), y.max = max(gal_df$y), transform = T, 
                  dist = 50, st.size = 1.75, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = -88, y = -2.2), box.fill = 'black')
@@ -1576,8 +1576,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 8),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(-40, -36), labels = c('-40บ', '-36บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-14, -8), labels = c('-14บ', '-8บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-40, -36), labels = c('-40ยบ', '-36ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-14, -8), labels = c('-14ยบ', '-8ยบ')) +
   ggsn::scalebar(x.min = min(tdc_df$x), x.max = max(tdc_df$x), y.min = min(tdc_df$y), y.max = max(tdc_df$y), transform = T, 
                  dist = 50, st.size = 1.75, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = -14, y = -42.5), box.fill = 'black')
@@ -1603,8 +1603,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 7),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(-40, -38, -36), labels = c('-40บ', '-38บ', '-36บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(75, 80), labels = c('75บ', '80บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-40, -38, -36), labels = c('-40ยบ', '-38ยบ', '-36ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(75, 80), labels = c('75ยบ', '80ยบ')) +
   ggsn::scalebar(x.min = min(ams_df$x), x.max = max(ams_df$x), y.min = min(ams_df$y), y.max = max(ams_df$y), transform = T, 
                  dist = 50, st.size = 1.75, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = 80, y = -41.1), box.fill = 'black')
@@ -1681,7 +1681,7 @@ tdc_occ2$Classifier <- extract(tdc_final, SpatialPoints(tdc_occ2[, c('Longitude'
 table(tdc_occ1$Classifier)
 table(tdc_occ2$Classifier)
 
-gal_occ <- subset(dat, Region == 'Galแpagos Is.')
+gal_occ <- subset(dat, Region == 'Galรกpagos Is.')
 gal_occ1 <- subset(gal_occ, Source1 == 'Published literature')
 gal_occ1$Classifier <- extract(gal_final, SpatialPoints(gal_occ1[, c('Longitude', 'Latitude')], crs)) 
 table(gal_occ1$Classifier)
@@ -1846,7 +1846,7 @@ length(nea_final[nea_final == 4]) * 100 / length(nea_final[nea_final %in% c(2, 4
 length(nea_final[nea_final == 4]) * 100 / length(nea_final[nea_final %in% c(3, 4)])    
 length(nea_final[nea_final %in% c(3, 4)]) / length(nea_final[nea_final %in% c(2, 4)])   
 
-# Galแpagos Is.
+# Galรกpagos Is.
 gal_ext <- extent(-93, -87.5, -2.5, 1.25)      
 gal_final <- crop(mod_mosaic, gal_ext) 
 length(gal_final[gal_final %in% c(2, 4)]) * 100 / length(gal_final[gal_final %in% 2:4])
@@ -1901,8 +1901,8 @@ Region2 <- 'AUS'
 
 set.seed(111)
 
-# Functions from Nu๑ez-Penichet et al. (2021) available at https://github.com/townpeterson/vespa
-source('Functions_Nu๑ez_Penichet_2021.R')
+# Functions from Nuรฑez-Penichet et al. (2021) available at https://github.com/townpeterson/vespa
+source('Functions_Nuรฑez_Penichet_2021.R')
 
 # Preparing data for simulations
 
@@ -2083,7 +2083,7 @@ sparse_temp <-  bam::model2sparse(maps_x_EP[[1]])
 # and, we convert the occurrence points into a sparse matrix
 # Use all data in each region as seed for simulations 
 sub1 <- subset(global_occ, Region == 'Northeast Pacific')
-sub2 <- subset(global_occ, Region == 'Galแpagos Is.')
+sub2 <- subset(global_occ, Region == 'Galรกpagos Is.')
 sub3 <- subset(global_occ, Region == 'Southeast Pacific')
 invasion_occ1 <- SpatialPoints(sub1[,c('Longitude', 'Latitude')], CRS('+init=epsg:4326'))
 invasion_occ1 <- crop(invasion_occ1, maps_x_EP)
@@ -2145,8 +2145,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 6),
         panel.border = element_rect(colour = 'black', fill = NA, size = 0.5)) +
-  scale_y_continuous(name = NULL, breaks = c(0, 20), labels = c('0บ', '20บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-120, -100, -80), labels = c('-120บ', '-100บ', '-80บ')) +
+  scale_y_continuous(name = NULL, breaks = c(0, 20), labels = c('0ยบ', '20ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-120, -100, -80), labels = c('-120ยบ', '-100ยบ', '-80ยบ')) +
   ggsn::scalebar(x.min = min(df$x), x.max = max(df$x), y.min = min(df$y), y.max = max(df$y), transform = T, 
                  dist = 400, st.size = 1.1, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = -111.5, y = -8), box.fill = 'black')
@@ -2213,8 +2213,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 6),
         panel.border = element_rect(colour = 'black', fill = NA, size = 0.5)) +
-  scale_y_continuous(name = NULL, breaks = c(-35, -30), labels = c('-35บ', '-30บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-50, -40, -30, -20), labels = c('-50บ', '-40บ', '-30บ', '-20บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-35, -30), labels = c('-35ยบ', '-30ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-50, -40, -30, -20), labels = c('-50ยบ', '-40ยบ', '-30ยบ', '-20ยบ')) +
   ggsn::scalebar(x.min = min(df$x), x.max = max(df$x), y.min = min(df$y), y.max = max(df$y), transform = T, 
                  dist = 200, st.size = 1.1, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = -48, y = -38.25), box.fill = 'black')
@@ -2282,8 +2282,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 6),
         panel.border = element_rect(colour = 'black', fill = NA, size = 0.5)) +
-  scale_y_continuous(name = NULL, breaks = c(-35, -25, -15), labels = c('-35บ', '-25บ', '-15บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-10, 0, 10), labels = c('-10บ', '0บ', '10บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-35, -25, -15), labels = c('-35ยบ', '-25ยบ', '-15ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-10, 0, 10), labels = c('-10ยบ', '0ยบ', '10ยบ')) +
   ggsn::scalebar(x.min = min(df$x), x.max = max(df$x), y.min = min(df$y), y.max = max(df$y), transform = T, 
                  dist = 200, st.size = 1.1, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = 13.5, y = -37.75), box.fill = 'black')
@@ -2352,8 +2352,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 5),
         panel.border = element_rect(colour = 'black', fill = NA, size = 0.5)) +
-  scale_y_continuous(name = NULL, breaks = c(-35, -25), labels = c('-35บ', '-25บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(150, 160, 170), labels = c('150บ', '160บ', '170บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-35, -25), labels = c('-35ยบ', '-25ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(150, 160, 170), labels = c('150ยบ', '160ยบ', '170ยบ')) +
   ggsn::scalebar(x.min = min(df$x), x.max = max(df$x), y.min = min(df$y), y.max = max(df$y), transform = T, 
                  dist = 200, st.size = 1.1, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = 158, y = -37), box.fill = 'black')
@@ -2416,8 +2416,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 6),
         panel.border = element_rect(colour = 'black', fill = NA, size = 0.5)) +
-  scale_y_continuous(name = NULL, breaks = c(35, 25, 15), labels = c('35บ', '25บ', '15บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(135, 145, 155), labels = c('135บ', '145บ', '155บ')) +
+  scale_y_continuous(name = NULL, breaks = c(35, 25, 15), labels = c('35ยบ', '25ยบ', '15ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(135, 145, 155), labels = c('135ยบ', '145ยบ', '155ยบ')) +
   ggsn::scalebar(x.min = min(df$x), x.max = max(df$x), y.min = min(df$y), y.max = max(df$y), transform = T, 
                  dist = 200, st.size = 1.1, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = 156.5, y = 10.2), box.fill = 'black')
@@ -2481,8 +2481,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 6),
         panel.border = element_rect(colour = 'black', fill = NA, size = 0.5)) +
-  scale_y_continuous(name = NULL, breaks = c(-35, -30, -25), labels = c('-35บ', '-30บ', '-25บ')) + 
-  scale_x_continuous(name = NULL, breaks = c(-80, -75), labels = c('-80บ', '-75บ')) +
+  scale_y_continuous(name = NULL, breaks = c(-35, -30, -25), labels = c('-35ยบ', '-30ยบ', '-25ยบ')) + 
+  scale_x_continuous(name = NULL, breaks = c(-80, -75), labels = c('-80ยบ', '-75ยบ')) +
   ggsn::scalebar(x.min = min(df$x), x.max = max(df$x), y.min = min(df$y), y.max = max(df$y), transform = T, 
                  dist = 100, st.size = 1.1, height = 0.013, model = 'WGS84', dist_unit = 'km',
                  border.size = 0.5, anchor = c(x = -81.5, y = -36.5), box.fill = 'black')
@@ -2515,8 +2515,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 5),
         panel.border = element_rect(colour = 'black', fill = NA, size = 0.5)) +
-  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50บN', '0บ', '50บS')) + 
-  scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('100บE', '0บ', '100บW')) 
+  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50ยบN', '0ยบ', '50ยบS')) + 
+  scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('100ยบE', '0ยบ', '100ยบW')) 
 ggsave('Figure 6_world.tiff', dpi = 900, width = 10, height = 4.3, units = 'cm')
 
 
@@ -2569,8 +2569,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 8),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50บN', '0บ', '50บS')) + 
-  scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('100บW', '0บ', '100บE')) 
+  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50ยบN', '0ยบ', '50ยบS')) + 
+  scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('100ยบW', '0ยบ', '100ยบE')) 
 ggsave('Figure 7.tiff', dpi = 900, width = 20, height = 8.5, units = 'cm')
 
 
@@ -2648,8 +2648,8 @@ ggplot() +
   theme(panel.background = element_rect(fill = 'transparent'), panel.grid = element_blank(), 
         legend.position = 'none', axis.text = element_text(size = 8),
         panel.border = element_rect(colour = 'black', fill = NA, size = 1)) +
-  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50บN', '0บ', '50บS')) + 
-  scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('100บW', '0บ', '100บE')) 
+  scale_y_continuous(name = NULL, breaks = c(50, 0, -50), labels = c('50ยบN', '0ยบ', '50ยบS')) + 
+  scale_x_continuous(name = NULL, breaks = c(100, 0, -100), labels = c('100ยบW', '0ยบ', '100ยบE')) 
 ggsave('Figure S10.tiff', dpi = 900, width = 20, height = 8.5, units = 'cm')
 
 
