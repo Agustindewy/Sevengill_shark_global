@@ -1,5 +1,5 @@
 
-# De Wysiecki et al. - World ENM projection for the broadnose sevengill shark (Notorynchus cepedianus)
+# De Wysiecki et al. - Global ENM projection for the broadnose sevengill shark (Notorynchus cepedianus)
 
 # Modelling using automated protocol in 'kuenm' package (Cobos et al., 2019)
 
