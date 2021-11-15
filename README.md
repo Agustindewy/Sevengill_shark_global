@@ -1,4 +1,4 @@
-# Sevengill-shark-world
+# Sevengill-shark-global
 This repository contains scripts to reproduce analysis in De Wysiecki et al. (in review).
 
 Analysis for SWA cannot be fully reproduced because a fraction of occurrences have confidentiality agreements in place and could not be released.
